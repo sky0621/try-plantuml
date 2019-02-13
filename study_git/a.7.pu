@@ -1,0 +1,33 @@
+@startuml
+cloud "github.com" {
+  package "sky0621（実プロダクト管理アカウント）" {
+    frame "productAリポジトリ_" {
+      [masterブランチ ]
+      [developブランチ ]
+    }
+  }
+
+  package "your-own-account（個人の作業アカウント）" {
+    frame "productAリポジトリ" {
+      [masterブランチ]
+      [developブランチ]
+      [feature/your-own-account/add-btxtブランチ ]
+    }
+  }
+}
+
+[masterブランチ ] .. [masterブランチ] : fork
+[developブランチ ] .. [developブランチ] : fork
+
+node "local環境" {
+  frame "your-own-account（個人の作業アカウント）_" {
+    frame "productAリポジトリ__" {
+      [masterブランチ  ]
+      [feature/your-own-account/add-btxtブランチ  ]
+    }
+  }
+}
+
+[masterブランチ] .. [masterブランチ  ]
+
+@enduml

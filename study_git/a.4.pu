@@ -1,0 +1,18 @@
+@startuml
+node "local環境" {
+  frame "your-own-account（個人の作業アカウント）" {
+    frame "productAリポジトリ" {
+      rectangle "a.txt"
+    }
+  }
+  frame "インデックス" {
+      rectangle "a.txt "
+  }
+  frame "ワークツリー（作業ディレクトリ）" {
+    frame "productAリポジトリ_" {
+      rectangle "a.txt  "
+      rectangle "b.txt  " #LightCyan
+    }
+  }
+}
+@enduml

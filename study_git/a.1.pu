@@ -1,0 +1,18 @@
+@startuml
+cloud "github.com" {
+  package "sky0621（実プロダクト管理アカウント）" {
+    frame "productAリポジトリ_" {
+      [masterブランチ_]
+    }
+  }
+
+  package "your-own-account（個人の作業アカウント）" {
+    frame "productAリポジトリ" {
+      [masterブランチ]
+    }
+  }
+}
+
+[masterブランチ_] .. [masterブランチ] : fork
+
+@enduml
