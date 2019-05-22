@@ -1,0 +1,19 @@
+@startuml
+!include ./common.puml
+!include ./Icons/Compute/App Engine.puml
+!include ./Icons/Big Data/Cloud PubSub.puml
+!include ./Icons/Big Data/Cloud Dataflow.puml
+
+GCP_AppEngine("cc","Capture Changes")
+
+GCP_CloudPubSub("sc", "Streaming Changes")
+
+GCP_AppEngine("ia","Inventory APIs")
+
+GCP_CloudDataflow("is", "Inventory Streams")
+
+cc --> sc
+sc --> ia
+sc -> is
+
+@enduml

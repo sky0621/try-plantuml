@@ -1,0 +1,18 @@
+sprite $ContainerEngine [64x64/16z] {
+xTQ7hK9H38FXRE3zftq5ZcxzZHnwCptE9z6XJaM7r9dHb0kvT84UQMf8HtCQdDFLDSxcTBIgflCvkHu3A08-Jw0BzUovztSTFAnOpTwlmHWyRdeEddUjBXZ2
+kjMkGEyrbE2zjhttWkHU9g6NpQN-7lTVyi-V5FYnIjfvR40dVXR0So_1VOdz36VTzn8CMbvLUWd_zQ31UmCQlUIy83n53yJU02yOpIHOnbUXYXlsz0j1JVxx
+MGK5UroiybhA_sddVq0QdCVAjB8gN-4sxtaZr_uUNl0FlAVvZkOQzcET_F-8WxeLqCs0xWLuCu7-1G
+}
+
+
+!definelong GCP_ContainerEngine(alias,name,container='rectangle',stereo='ContainerEngine')
+skinparam container<<stereo>> {
+  BackgroundColor White
+  BorderColor White
+  Shadowing false
+}
+container alias <<stereo>> [
+<b>name
+<color:GCP_COLOR><$ContainerEngine{scale=0.3}></color>
+]
+!enddefinelong

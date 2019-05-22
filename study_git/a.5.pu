@@ -7,11 +7,13 @@ node "local環境" {
   }
   frame "インデックス" {
       rectangle "a.txt "
+      rectangle "b.txt" #LightCyan
   }
   frame "ワークツリー（作業ディレクトリ）" {
     frame "productAリポジトリ_" {
       rectangle "a.txt  "
-      rectangle "b.txt  " #LightCyan
+      rectangle "b.txt " #LightCyan
+      rectangle "c.txt " #LightCyan
     }
   }
 }
