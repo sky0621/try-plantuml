@@ -3,17 +3,54 @@
 !include ./Icons/Compute/App Engine.puml
 !include ./Icons/Big Data/Cloud PubSub.puml
 !include ./Icons/Big Data/Cloud Dataflow.puml
+!include ./Icons/Storage & Databases/Cloud SQL.puml
+!include ./Icons/Big Data/BigQuery.puml
+!include ./Icons/Storage & Databases/Cloud Bigtable.puml
 
-GCP_AppEngine("cc","Capture Changes")
+rectangle RetailStore as rs {
+    node "Inventory Changes" <<"Point of sale">>
+}
 
-GCP_CloudPubSub("sc", "Streaming Changes")
+rectangle Ingest {
+    GCP_AppEngine("cc","Capture Changes")
+}
+rectangle Messaging {
+    GCP_CloudPubSub("sc", "Streaming Changes")
+}
+rectangle Services {
+    GCP_AppEngine("ia","Inventory APIs")
+}
+rectangle Processing {
+    GCP_CloudDataflow("is", "Inventory Streams")
+}
+rectangle Aggregates {
+    GCP_CloudSQL("ic", "Inventory Counts")
+}
+rectangle Analytics {
+    GCP_BigQuery("dw", "Data Warehouse")
+}
+rectangle Events {
+    GCP_CloudBigtable("pc", "Processed Changes")
+}
 
-GCP_AppEngine("ia","Inventory APIs")
+rectangle Integrations as i {
+    node "Google Services"
+}
 
-GCP_CloudDataflow("is", "Inventory Streams")
+rectangle BackOffice as bo {
+    node "Businness Applications"
+}
 
+
+rs -> cc
 cc --> sc
 sc --> ia
 sc -> is
+is --> ic
+ic -left-> ia
+is -> pc
+is -> dw
+ia --> bo
+ia --> i
 
 @enduml
