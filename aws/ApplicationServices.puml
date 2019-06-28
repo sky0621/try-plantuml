@@ -1,0 +1,24 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/ApplicationServices/AWSStepFunctions/AWSStepFunctions.puml
+' !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
+' !includeurl AWSPUML/ApplicationServices/AmazonElasticTranscoder/AmazonElasticTranscoder.puml
+' !includeurl AWSPUML/ApplicationServices/AmazonSWF/AmazonSWF.puml
+' !includeurl AWSPUML/ApplicationServices/AmazonSWF/decider/decider.puml
+' !includeurl AWSPUML/ApplicationServices/AmazonSWF/worker/worker.puml
+
+package "ApplicationServices" {
+    AWSSTEPFUNCTIONS("AWSSTEPFUNCTIONS")
+    ' AMAZONAPIGATEWAY("AMAZONAPIGATEWAY")
+    ' AMAZONELASTICTRANSCODER("AMAZONELASTICTRANSCODER")
+    ' AMAZONREKOGNITION("AMAZONREKOGNITION")
+    ' AMAZONSWF("AMAZONSWF") {
+    '     DECIDER("DECIDER")
+    '     WORKER("WORKER")
+    ' }
+}
+
+@enduml
