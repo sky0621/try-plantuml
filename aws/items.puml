@@ -1,10 +1,7 @@
 @startuml
 !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 
-!includeurl AWSPUML/common.puml
-!includeurl AWSPUML/AI/AmazonLex/AmazonLex.puml
-
-AMAZONLEX("AMAZONLEX")
-
+!include AI.puml
+!include Analytics.puml
 
 @enduml

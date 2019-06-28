@@ -1,0 +1,18 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/AI/AmazonLex/AmazonLex.puml
+!includeurl AWSPUML/AI/AmazonMachineLearning/AmazonMachineLearning.puml
+!includeurl AWSPUML/AI/AmazonPolly/AmazonPolly.puml
+!includeurl AWSPUML/AI/AmazonRekognition/AmazonRekognition.puml
+
+package "AI" {
+    AMAZONLEX("AMAZONLEX")
+    AMAZONMACHINELEARNING("AMAZONMACHINELEARNING")
+    AMAZONPOLLY("AMAZONPOLLY")
+    AMAZONREKOGNITION("AMAZONREKOGNITION")
+}
+
+@enduml
