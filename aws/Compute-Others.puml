@@ -1,0 +1,63 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Compute/AWSBatch/AWSBatch.puml
+
+!includeurl AWSPUML/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml
+!includeurl AWSPUML/Compute/AWSElasticBeanstalk/application/application.puml
+!includeurl AWSPUML/Compute/AWSElasticBeanstalk/deployment/deployment.puml
+
+!includeurl AWSPUML/Compute/AWSLambda/AWSLambda.puml
+!includeurl AWSPUML/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml
+
+!includeurl AWSPUML/Compute/AmazonECR/AmazonECR.puml
+!includeurl AWSPUML/Compute/AmazonECR/ECRRegistry/ECRRegistry.puml
+
+!includeurl AWSPUML/Compute/AmazonECS/AmazonECS.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer/ECScontainer.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer_Alt1/ECScontainer_Alt1.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer_Alt2/ECScontainer_Alt2.puml
+
+!includeurl AWSPUML/Compute/AmazonLightsail/AmazonLightsail.puml
+
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ElasticLoadBalancing.puml
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ApplicationLoadBalancing_LARGE/ApplicationLoadBalancing_LARGE.puml
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ClassicLoadbalancer/ClassicLoadbalancer.puml
+
+package "Compute" {
+    AWSBATCH("AWSBATCH")
+
+    AWSELASTICBEANSTALK("AWSELASTICBEANSTALK") {
+        APPLICATION("APPLICATION")
+        DEPLOYMENT("DEPLOYMENT")
+    }
+
+    AWSLAMBDA("AWSLAMBDA") {
+        LAMBDAFUNCTION("LAMBDAFUNCTION")
+    }
+
+    AMAZONECR("AMAZONECR") {
+        ECRREGISTRY("ECRREGISTRY")
+    }
+
+    AMAZONECS("AMAZONECS") {
+        ECSCONTAINER("ECSCONTAINER")
+        ECSCONTAINER_ALT1("ECSCONTAINER_ALT1")
+        ECSCONTAINER_ALT2("ECSCONTAINER_ALT2")
+    }
+
+    AMAZONLIGHTSAIL("AMAZONLIGHTSAIL")
+
+    ELASTICLOADBALANCING("ELASTICLOADBALANCING") {
+        APPLICATIONLOADBALANCER("APPLICATIONLOADBALANCER")
+        COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER("COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER")
+        APPLICATIONLOADBALANCING_LARGE("APPLICATIONLOADBALANCING_LARGE")
+        COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE("COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE")
+        CLASSICLOADBALANCER("CLASSICLOADBALANCER")
+    }
+}
+
+@enduml

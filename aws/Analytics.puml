@@ -4,10 +4,14 @@
 !includeurl AWSPUML/common.puml
 
 !includeurl AWSPUML/Analytics/AWSDataPipeline/AWSDataPipeline.puml
+
 !includeurl AWSPUML/Analytics/AWSGlue/AWSGlue.puml
+
 !includeurl AWSPUML/Analytics/AmazonAthena/AmazonAthena.puml
+
 !includeurl AWSPUML/Analytics/AmazonCloudSearch/AmazonCloudSearch.puml
 !includeurl AWSPUML/Analytics/AmazonCloudSearch/searchdocuments/searchdocuments.puml
+
 !includeurl AWSPUML/Analytics/AmazonEMR/AmazonEMR.puml
 !includeurl AWSPUML/Analytics/AmazonEMR/EMRengine/EMRengine.puml
 !includeurl AWSPUML/Analytics/AmazonEMR/EMRengineMapRM3/EMRengineMapRM3.puml
@@ -15,24 +19,32 @@
 !includeurl AWSPUML/Analytics/AmazonEMR/EMRengineMapRM7/EMRengineMapRM7.puml
 !includeurl AWSPUML/Analytics/AmazonEMR/cluster/cluster.puml
 !includeurl AWSPUML/Analytics/AmazonEMR_HDFScluster/AmazonEMR_HDFScluster.puml
+
 !includeurl AWSPUML/Analytics/AmazonES/AmazonES.puml
+
 !includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesis.puml
 !includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisAnalytics/AmazonKinesisAnalytics.puml
 !includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisFirehose/AmazonKinesisFirehose.puml
 !includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisStreams/AmazonKinesisStreams.puml
 !includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesis_enabledapp/AmazonKinesis_enabledapp.puml
+
 !includeurl AWSPUML/Analytics/AmazonQuickSight/AmazonQuickSight.puml
+
 !includeurl AWSPUML/Analytics/AmazonRedshift/AmazonRedshift.puml
 !includeurl AWSPUML/Analytics/AmazonRedshift/densecomputenode/densecomputenode.puml
 !includeurl AWSPUML/Analytics/AmazonRedshift/densestoragenode/densestoragenode.puml
 
 package "Analytics" {
     AWSDATAPIPELINE("AWSDATAPIPELINE")
+
     AWSGLUE("AWSGLUE")
+
     AMAZONATHENA("AMAZONATHENA")
+
     AMAZONCLOUDSEARCH("AMAZONCLOUDSEARCH") {
         SEARCHDOCUMENTS("SEARCHDOCUMENTS")
     }
+
     AMAZONEMR("AMAZONEMR") {
         EMRENGINE("EMRENGINE")
         EMRENGINEMAPRM3("EMRENGINEMAPRM3")
@@ -40,15 +52,20 @@ package "Analytics" {
         EMRENGINEMAPRM7("EMRENGINEMAPRM7")
         CLUSTER("CLUSTER")
     }
+
     AMAZONEMR_HDFSCLUSTER("AMAZONEMR_HDFSCLUSTER")
+
     AMAZONES("AMAZONES")
+
     AMAZONKINESIS("AMAZONKINESIS") {
         AMAZONKINESISANALYTICS("AMAZONKINESISANALYTICS")
         AMAZONKINESISFIREHOSE("AMAZONKINESISFIREHOSE")
         AMAZONKINESISSTREAMS("AMAZONKINESISSTREAMS")
         AMAZONKINESIS_ENABLEDAPP("AMAZONKINESIS_ENABLEDAPP")
     }
+
     AMAZONQUICKSIGHT("AMAZONQUICKSIGHT")
+
     AMAZONREDSHIFT("AMAZONREDSHIFT") {
         DENSECOMPUTENODE("DENSECOMPUTENODE")
         ANALYTICS_AMAZONREDSHIFT_DENSECOMPUTENODE("ANALYTICS_AMAZONREDSHIFT_DENSECOMPUTENODE")

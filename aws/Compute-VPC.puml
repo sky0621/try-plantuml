@@ -1,0 +1,48 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Compute/AmazonVPC/AmazonVPC.puml
+!includeurl AWSPUML/Compute/AmazonVPC/Internetgateway/Internetgateway.puml
+!includeurl AWSPUML/Compute/AmazonVPC/VPCNATgateway/VPCNATgateway.puml
+!includeurl AWSPUML/Compute/AmazonVPC/VPCpeering/VPCpeering.puml
+!includeurl AWSPUML/Compute/AmazonVPC/VPNconnection/VPNconnection.puml
+!includeurl AWSPUML/Compute/AmazonVPC/VPNgateway/VPNgateway.puml
+!includeurl AWSPUML/Compute/AmazonVPC/customergateway/customergateway.puml
+!includeurl AWSPUML/Compute/AmazonVPC/elasticnetworkadapter/elasticnetworkadapter.puml
+!includeurl AWSPUML/Compute/AmazonVPC/elasticnetworkinterface/elasticnetworkinterface.puml
+!includeurl AWSPUML/Compute/AmazonVPC/endpoints/endpoints.puml
+!includeurl AWSPUML/Compute/AmazonVPC/flowlogs/flowlogs.puml
+!includeurl AWSPUML/Compute/AmazonVPC/networkaccesscontrollist/networkaccesscontrollist.puml
+!includeurl AWSPUML/Compute/AmazonVPC/router/router.puml
+
+package "Compute" {
+    AMAZONVPC("AMAZONVPC") {
+        INTERNETGATEWAY("INTERNETGATEWAY")
+        VPCNATGATEWAY("VPCNATGATEWAY")
+        COMPUTE_AMAZONVPC_VPCNATGATEWAY("COMPUTE_AMAZONVPC_VPCNATGATEWAY")
+        VPCPEERING("VPCPEERING")
+        COMPUTE_AMAZONVPC_VPCPEERING("COMPUTE_AMAZONVPC_VPCPEERING")
+        VPNCONNECTION("VPNCONNECTION")
+        COMPUTE_AMAZONVPC_VPNCONNECTION("COMPUTE_AMAZONVPC_VPNCONNECTION")
+        VPNGATEWAY("VPNGATEWAY")
+        COMPUTE_AMAZONVPC_VPNGATEWAY("COMPUTE_AMAZONVPC_VPNGATEWAY")
+        CUSTOMERGATEWAY("CUSTOMERGATEWAY")
+        COMPUTE_AMAZONVPC_CUSTOMERGATEWAY("COMPUTE_AMAZONVPC_CUSTOMERGATEWAY")
+        ELASTICNETWORKADAPTER("ELASTICNETWORKADAPTER")
+        COMPUTE_AMAZONVPC_ELASTICNETWORKADAPTER("COMPUTE_AMAZONVPC_ELASTICNETWORKADAPTER")
+        ELASTICNETWORKINTERFACE("ELASTICNETWORKINTERFACE")
+        COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE("COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE")
+        ENDPOINTS("ENDPOINTS")
+        COMPUTE_AMAZONVPC_ENDPOINTS("COMPUTE_AMAZONVPC_ENDPOINTS")
+        FLOWLOGS("FLOWLOGS")
+        COMPUTE_AMAZONVPC_FLOWLOGS("COMPUTE_AMAZONVPC_FLOWLOGS")
+        NETWORKACCESSCONTROLLIST("NETWORKACCESSCONTROLLIST")
+        COMPUTE_AMAZONVPC_NETWORKACCESSCONTROLLIST("COMPUTE_AMAZONVPC_NETWORKACCESSCONTROLLIST")
+        ROUTER("ROUTER")
+        COMPUTE_AMAZONVPC_ROUTER("COMPUTE_AMAZONVPC_ROUTER")
+    }
+}
+
+@enduml

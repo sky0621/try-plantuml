@@ -4,21 +4,26 @@
 !includeurl AWSPUML/common.puml
 
 !includeurl AWSPUML/ApplicationServices/AWSStepFunctions/AWSStepFunctions.puml
-' !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
-' !includeurl AWSPUML/ApplicationServices/AmazonElasticTranscoder/AmazonElasticTranscoder.puml
-' !includeurl AWSPUML/ApplicationServices/AmazonSWF/AmazonSWF.puml
-' !includeurl AWSPUML/ApplicationServices/AmazonSWF/decider/decider.puml
-' !includeurl AWSPUML/ApplicationServices/AmazonSWF/worker/worker.puml
+
+!includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
+
+!includeurl AWSPUML/ApplicationServices/AmazonElasticTranscoder/AmazonElasticTranscoder.puml
+
+!includeurl AWSPUML/ApplicationServices/AmazonSWF/AmazonSWF.puml
+!includeurl AWSPUML/ApplicationServices/AmazonSWF/decider/decider.puml
+!includeurl AWSPUML/ApplicationServices/AmazonSWF/worker/worker.puml
 
 package "ApplicationServices" {
     AWSSTEPFUNCTIONS("AWSSTEPFUNCTIONS")
-    ' AMAZONAPIGATEWAY("AMAZONAPIGATEWAY")
-    ' AMAZONELASTICTRANSCODER("AMAZONELASTICTRANSCODER")
-    ' AMAZONREKOGNITION("AMAZONREKOGNITION")
-    ' AMAZONSWF("AMAZONSWF") {
-    '     DECIDER("DECIDER")
-    '     WORKER("WORKER")
-    ' }
+
+    AMAZONAPIGATEWAY("AMAZONAPIGATEWAY")
+
+    AMAZONELASTICTRANSCODER("AMAZONELASTICTRANSCODER")
+
+    AMAZONSWF("AMAZONSWF") {
+        DECIDER("DECIDER")
+        WORKER("WORKER")
+    }
 }
 
 @enduml

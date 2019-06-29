@@ -1,0 +1,20 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/BusinessProductivity/AmazonChime/AmazonChime.puml
+
+!includeurl AWSPUML/BusinessProductivity/AmazonWorkDocs/AmazonWorkDocs.puml
+
+!includeurl AWSPUML/BusinessProductivity/AmazonWorkMail/AmazonWorkMail.puml
+
+package "BusinessProductivity" {
+    AMAZONCHIME("AMAZONCHIME")
+
+    AMAZONWORKDOCS("AMAZONWORKDOCS")
+
+    AMAZONWORKMAIL("AMAZONWORKMAIL")
+}
+
+@enduml

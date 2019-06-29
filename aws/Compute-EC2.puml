@@ -1,0 +1,38 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Compute/AmazonEC2/AmazonEC2.puml
+!includeurl AWSPUML/Compute/AmazonEC2/AMI/AMI.puml
+!includeurl AWSPUML/Compute/AmazonEC2/AutoScaling/AutoScaling.puml
+!includeurl AWSPUML/Compute/AmazonEC2/DBoninstance/DBoninstance.puml
+!includeurl AWSPUML/Compute/AmazonEC2/EC2rescue/EC2rescue.puml
+!includeurl AWSPUML/Compute/AmazonEC2/ElasticIPaddress/ElasticIPaddress.puml
+!includeurl AWSPUML/Compute/AmazonEC2/SpotFleet/SpotFleet.puml
+!includeurl AWSPUML/Compute/AmazonEC2/SpotInstance/SpotInstance.puml
+!includeurl AWSPUML/Compute/AmazonEC2/X1instance/X1instance.puml
+!includeurl AWSPUML/Compute/AmazonEC2/instance/instance.puml
+!includeurl AWSPUML/Compute/AmazonEC2/instances/instances.puml
+!includeurl AWSPUML/Compute/AmazonEC2/instancewithCloudWatch/instancewithCloudWatch.puml
+!includeurl AWSPUML/Compute/AmazonEC2/optimizedinstance/optimizedinstance.puml
+
+package "Compute" {
+    AMAZONEC2("AMAZONEC2") {
+        AMI("AMI")
+        AUTOSCALING("AutoScaling")
+        DBONINSTANCE("DBONINSTANCE")
+        EC2RESCUE("EC2RESCUE")
+        ELASTICIPADDRESS("ELASTICIPADDRESS")
+        SPOTFLEET("SPOTFLEET")
+        SPOTINSTANCE("SPOTINSTANCE")
+        X1INSTANCE("X1INSTANCE")
+        INSTANCE("INSTANCE")
+        INSTANCES("INSTANCES")
+        AMAZONEC2_INSTANCES("AMAZONEC2_INSTANCES")
+        INSTANCEWITHCLOUDWATCH("INSTANCEWITHCLOUDWATCH")
+        OPTIMIZEDINSTANCE("OPTIMIZEDINSTANCE")
+    }
+}
+
+@enduml
