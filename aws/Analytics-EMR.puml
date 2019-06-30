@@ -1,0 +1,24 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Analytics/AmazonEMR/AmazonEMR.puml
+!includeurl AWSPUML/Analytics/AmazonEMR/EMRengine/EMRengine.puml
+!includeurl AWSPUML/Analytics/AmazonEMR/EMRengineMapRM3/EMRengineMapRM3.puml
+!includeurl AWSPUML/Analytics/AmazonEMR/EMRengineMapRM5/EMRengineMapRM5.puml
+!includeurl AWSPUML/Analytics/AmazonEMR/EMRengineMapRM7/EMRengineMapRM7.puml
+!includeurl AWSPUML/Analytics/AmazonEMR/cluster/cluster.puml
+!includeurl AWSPUML/Analytics/AmazonEMR_HDFScluster/AmazonEMR_HDFScluster.puml
+
+package "Analytics" {
+    AMAZONEMR("AMAZONEMR") {
+        EMRENGINE("EMRENGINE")
+        EMRENGINEMAPRM3("EMRENGINEMAPRM3")
+        EMRENGINEMAPRM5("EMRENGINEMAPRM5")
+        EMRENGINEMAPRM7("EMRENGINEMAPRM7")
+        CLUSTER("CLUSTER")
+    }
+}
+
+@enduml

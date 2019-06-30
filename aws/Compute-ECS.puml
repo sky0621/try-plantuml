@@ -1,0 +1,19 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Compute/AmazonECS/AmazonECS.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer/ECScontainer.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer_Alt1/ECScontainer_Alt1.puml
+!includeurl AWSPUML/Compute/AmazonECS/ECScontainer_Alt2/ECScontainer_Alt2.puml
+
+package "Compute" {
+    AMAZONECS("AMAZONECS") {
+        ECSCONTAINER("ECSCONTAINER")
+        ECSCONTAINER_ALT1("ECSCONTAINER_ALT1")
+        ECSCONTAINER_ALT2("ECSCONTAINER_ALT2")
+    }
+}
+
+@enduml

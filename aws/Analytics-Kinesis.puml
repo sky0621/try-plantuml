@@ -1,0 +1,21 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesis.puml
+!includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisAnalytics/AmazonKinesisAnalytics.puml
+!includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisFirehose/AmazonKinesisFirehose.puml
+!includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesisStreams/AmazonKinesisStreams.puml
+!includeurl AWSPUML/Analytics/AmazonKinesis/AmazonKinesis_enabledapp/AmazonKinesis_enabledapp.puml
+
+package "Analytics" {
+    AMAZONKINESIS("AMAZONKINESIS") {
+        AMAZONKINESISANALYTICS("AMAZONKINESISANALYTICS")
+        AMAZONKINESISFIREHOSE("AMAZONKINESISFIREHOSE")
+        AMAZONKINESISSTREAMS("AMAZONKINESISSTREAMS")
+        AMAZONKINESIS_ENABLEDAPP("AMAZONKINESIS_ENABLEDAPP")
+    }
+}
+
+@enduml

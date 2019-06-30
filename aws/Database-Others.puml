@@ -6,24 +6,12 @@
 !includeurl AWSPUML/Database/AWSDMS/AWSDMS.puml
 !includeurl AWSPUML/Database/AWSDMS/databasemigrationworkflowjob/databasemigrationworkflowjob.puml
 
-!includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/attribute/attribute.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/attributes/attributes.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/globalsecondaryindex/globalsecondaryindex.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/item/item.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/items/items.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
-
 !includeurl AWSPUML/Database/AmazonDynamoDBAccelerator/AmazonDynamoDBAccelerator.puml
 
 !includeurl AWSPUML/Database/AmazonElasticCache/AmazonElasticCache.puml
 !includeurl AWSPUML/Database/AmazonElasticCache/Memcached/Memcached.puml
 !includeurl AWSPUML/Database/AmazonElasticCache/Redis/Redis.puml
 !includeurl AWSPUML/Database/AmazonElasticCache/cachenode/cachenode.puml
-
-!includeurl AWSPUML/Database/AmazonRedshift/AmazonRedshift.puml
-!includeurl AWSPUML/Database/AmazonRedshift/densecomputenode/densecomputenode.puml
-!includeurl AWSPUML/Database/AmazonRedshift/densestoragenode/densestoragenode.puml
 
 package "Database" {
     AWSDMS("AWSDMS") {
@@ -33,28 +21,12 @@ package "Database" {
         DATABASEMIGRATIONWORKFLOWJOB("DATABASEMIGRATIONWORKFLOWJOB")
     }
 
-    AMAZONDYNAMODB("AMAZONDYNAMODB") {
-        ATTRIBUTE("ATTRIBUTE")
-        ATTRIBUTES("ATTRIBUTES")
-        GLOBALSECONDARYINDEX("GLOBALSECONDARYINDEX")
-        ITEM("ITEM")
-        ITEMS("ITEMS")
-        TABLE("TABLE")
-    }
-
     AMAZONDYNAMODBACCELERATOR("AMAZONDYNAMODBACCELERATOR")
 
     AMAZONELASTICCACHE("AMAZONELASTICCACHE") {
         MEMCACHED("MEMCACHED")
         REDIS("REDIS")
         CACHENODE("CACHENODE")
-    }
-
-    AMAZONREDSHIFT("AMAZONREDSHIFT") {
-        DENSECOMPUTENODE("DENSECOMPUTENODE")
-        DATABASE_AMAZONREDSHIFT_DENSECOMPUTENODE("DATABASE_AMAZONREDSHIFT_DENSECOMPUTENODE")
-        DENSESTORAGENODE("DENSESTORAGENODE")
-        DATABASE_AMAZONREDSHIFT_DENSESTORAGENODE("DATABASE_AMAZONREDSHIFT_DENSESTORAGENODE")
     }
 }
 

@@ -1,0 +1,18 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ElasticLoadBalancing.puml
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml
+!includeurl AWSPUML/Compute/ElasticLoadBalancing/ClassicLoadbalancer/ClassicLoadbalancer.puml
+
+package "Compute" {
+    ELASTICLOADBALANCING("ELASTICLOADBALANCING") {
+        APPLICATIONLOADBALANCER("APPLICATIONLOADBALANCER")
+        COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER("COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER")
+        CLASSICLOADBALANCER("CLASSICLOADBALANCER")
+    }
+}
+
+@enduml

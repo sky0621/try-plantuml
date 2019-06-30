@@ -1,0 +1,20 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/ManagementTools/AWSCloudFormation/AWSCloudFormation.puml
+!includeurl AWSPUML/ManagementTools/AWSCloudFormation/changeset/changeset.puml
+!includeurl AWSPUML/ManagementTools/AWSCloudFormation/stack/stack.puml
+!includeurl AWSPUML/ManagementTools/AWSCloudFormation/template/template.puml
+
+package "ManagementTools" {
+    AWSCLOUDFORMATION("AWSCLOUDFORMATION") {
+        CHANGESET("CHANGESET")
+        STACK("STACK")
+        AWSCLOUDFORMATION_STACK("AWSCLOUDFORMATION_STACK")
+        TEMPLATE("TEMPLATE")
+    }
+}
+
+@enduml

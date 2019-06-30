@@ -1,0 +1,50 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/General/AWSManagementConsole/AWSManagementConsole.puml
+!includeurl AWSPUML/General/AWScloud/AWScloud.puml
+!includeurl AWSPUML/General/Internet/Internet.puml
+!includeurl AWSPUML/General/Internetalternate1/Internetalternate1.puml
+!includeurl AWSPUML/General/Internetalternate2/Internetalternate2.puml
+!includeurl AWSPUML/General/SAMLtoken/SAMLtoken.puml
+!includeurl AWSPUML/General/SSLpadlock/SSLpadlock.puml
+!includeurl AWSPUML/General/client/client.puml
+!includeurl AWSPUML/General/corporatedatacenter/corporatedatacenter.puml
+!includeurl AWSPUML/General/disk/disk.puml
+!includeurl AWSPUML/General/forums/forums.puml
+!includeurl AWSPUML/General/genericdatabase/genericdatabase.puml
+!includeurl AWSPUML/General/mobileclient/mobileclient.puml
+!includeurl AWSPUML/General/multimedia/multimedia.puml
+!includeurl AWSPUML/General/officebuilding/officebuilding.puml
+!includeurl AWSPUML/General/tapestorage/tapestorage.puml
+!includeurl AWSPUML/General/traditionalserver/traditionalserver.puml
+!includeurl AWSPUML/General/user/user.puml
+!includeurl AWSPUML/General/users/users.puml
+!includeurl AWSPUML/General/virtualprivatecloud/virtualprivatecloud.puml
+
+package "General" {
+    AWSMANAGEMENTCONSOLE("AWSMANAGEMENTCONSOLE")
+    AWSCLOUD("AWSCLOUD")
+    INTERNET("INTERNET")
+    INTERNETALTERNATE1("INTERNETALTERNATE1")
+    INTERNETALTERNATE2("INTERNETALTERNATE2")
+    SAMLTOKEN("SAMLTOKEN")
+    SSLPADLOCK("SSLPADLOCK")
+    CLIENT("CLIENT")
+    CORPORATEDATACENTER("CORPORATEDATACENTER")
+    DISK("DISK")
+    FORUMS("FORUMS")
+    GENERICDATABASE("GENERICDATABASE")
+    MOBILECLIENT("MOBILECLIENT")
+    MULTIMEDIA("MULTIMEDIA")
+    OFFICEBUILDING("OFFICEBUILDING")
+    TAPESTORAGE("TAPESTORAGE")
+    TRADITIONALSERVER("TRADITIONALSERVER")
+    USER("USER")
+    USERS("USERS")
+    VIRTUALPRIVATECLOUD("VIRTUALPRIVATECLOUD")
+}
+
+@enduml

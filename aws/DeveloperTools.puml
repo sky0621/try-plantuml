@@ -4,18 +4,29 @@
 !includeurl AWSPUML/common.puml
 
 !includeurl AWSPUML/DeveloperTools/AWSCodeBuild/AWSCodeBuild.puml
+
 !includeurl AWSPUML/DeveloperTools/AWSCodeCommit/AWSCodeCommit.puml
+
 !includeurl AWSPUML/DeveloperTools/AWSCodeDeploy/AWSCodeDeploy.puml
-!includeurl AWSPUML/DeveloperTools/
-!includeurl AWSPUML/DeveloperTools/
-!includeurl AWSPUML/DeveloperTools/
-!includeurl AWSPUML/DeveloperTools/
-!includeurl AWSPUML/DeveloperTools/
+
+!includeurl AWSPUML/DeveloperTools/AWSCodePipeline/AWSCodePipeline.puml
+
+!includeurl AWSPUML/DeveloperTools/AWSCodeStar/AWSCodeStar.puml
+
+!includeurl AWSPUML/DeveloperTools/AWSX_Ray/AWSX_Ray.puml
 
 package "DeveloperTools" {
     AWSCODEBUILD("AWSCODEBUILD")
+
     AWSCODECOMMIT("AWSCODECOMMIT")
+
     AWSCODEDEPLOY("AWSCODEDEPLOY")
+
+    AWSCODEPIPELINE("AWSCODEPIPELINE")
+
+    AWSCODESTAR("AWSCODESTAR")
+
+    AWSX_RAY("AWSX_RAY")
 }
 
 @enduml

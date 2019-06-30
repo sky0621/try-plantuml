@@ -1,0 +1,23 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/AWSTrustedAdvisor.puml
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/checklist/checklist.puml
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/checklistcost/checklistcost.puml
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/checklistfaulttolerance/checklistfaulttolerance.puml
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/checklistperformance/checklistperformance.puml
+!includeurl AWSPUML/ManagementTools/AWSTrustedAdvisor/checklistsecurity/checklistsecurity.puml
+
+package "ManagementTools" {
+    AWSTRUSTEDADVISOR("AWSTRUSTEDADVISOR") {
+        CHECKLIST("CHECKLIST")
+        CHECKLISTCOST("CHECKLISTCOST")
+        CHECKLISTFAULTTOLERANCE("CHECKLISTFAULTTOLERANCE")
+        CHECKLISTPERFORMANCE("CHECKLISTPERFORMANCE")
+        CHECKLISTSECURITY("CHECKLISTSECURITY")
+    }
+}
+
+@enduml

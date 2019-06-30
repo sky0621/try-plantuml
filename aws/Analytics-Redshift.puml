@@ -1,0 +1,19 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Analytics/AmazonRedshift/AmazonRedshift.puml
+!includeurl AWSPUML/Analytics/AmazonRedshift/densecomputenode/densecomputenode.puml
+!includeurl AWSPUML/Analytics/AmazonRedshift/densestoragenode/densestoragenode.puml
+
+package "Analytics" {
+    AMAZONREDSHIFT("AMAZONREDSHIFT") {
+        DENSECOMPUTENODE("DENSECOMPUTENODE")
+        ANALYTICS_AMAZONREDSHIFT_DENSECOMPUTENODE("ANALYTICS_AMAZONREDSHIFT_DENSECOMPUTENODE")
+        DENSESTORAGENODE("DENSESTORAGENODE")
+        ANALYTICS_AMAZONREDSHIFT_DENSESTORAGENODE("ANALYTICS_AMAZONREDSHIFT_DENSESTORAGENODE")
+    }
+}
+
+@enduml

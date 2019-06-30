@@ -1,0 +1,32 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/AWSOpsWorks.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/apps/apps.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/deployments/deployments.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/instances/instances.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/layers/layers.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/monitoring/monitoring.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/permissions/permissions.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/resources/resources.puml
+!includeurl AWSPUML/ManagementTools/AWSOpsWorks/stack/stack.puml
+
+package "ManagementTools" {
+    AWSOPSWORKS("AWSOPSWORKS") {
+        APPS("APPS")
+        DEPLOYMENTS("DEPLOYMENTS")
+        INSTANCES("INSTANCES")
+        AWSOPSWORKS_INSTANCES("AWSOPSWORKS_INSTANCES")
+        LAYERS("LAYERS")
+        MONITORING("MONITORING")
+        PERMISSIONS("PERMISSIONS")
+        AWSOPSWORKS_PERMISSIONS("AWSOPSWORKS_PERMISSIONS")
+        RESOURCES("RESOURCES")
+        STACK("STACK")
+        AWSOPSWORKS_STACK("AWSOPSWORKS_STACK")
+    }
+}
+
+@enduml

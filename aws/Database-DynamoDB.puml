@@ -1,0 +1,25 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/attribute/attribute.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/attributes/attributes.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/globalsecondaryindex/globalsecondaryindex.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/item/item.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/items/items.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
+
+package "Database" {
+    AMAZONDYNAMODB("AMAZONDYNAMODB") {
+        ATTRIBUTE("ATTRIBUTE")
+        ATTRIBUTES("ATTRIBUTES")
+        GLOBALSECONDARYINDEX("GLOBALSECONDARYINDEX")
+        ITEM("ITEM")
+        ITEMS("ITEMS")
+        TABLE("TABLE")
+    }
+}
+
+@enduml
