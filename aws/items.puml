@@ -2,26 +2,5 @@
 !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 
 !include AI.puml
-!include Analytics-EMR.puml
-!include Analytics-Redshift.puml
-!include BusinessProductivity.puml
-!include Compute-Others.puml
-!include Compute-ELB.puml
-!include Compute-ECS.puml
-!include Database-Others.puml
-!include DesktopAppStreaming.puml
-!include AmazonConnect.puml
-!include Analytics-Kinesis.puml
-!include ApplicationServices.puml
-!include Compute-VPC.puml
-!include Database-RDS.puml
-!include DeveloperTools.puml
-!include AmazonGameLift.puml
-!include Analytics-Others.puml
-!include AWSIoT.puml
-!include Compute-EC2.puml
-!include Database-DynamoDB.puml
-!include Database-Redshift.puml
-!include General.puml
 
 @enduml

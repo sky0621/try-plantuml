@@ -1,0 +1,41 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Messaging/AmazonPinpoint/AmazonPinpoint.puml
+
+!includeurl AWSPUML/Messaging/AmazonSES/AmazonSES.puml
+!includeurl AWSPUML/Messaging/AmazonSES/email/email.puml
+
+!includeurl AWSPUML/Messaging/AmazonSNS/AmazonSNS.puml
+!includeurl AWSPUML/Messaging/AmazonSNS/HTTPnotification/HTTPnotification.puml
+!includeurl AWSPUML/Messaging/AmazonSNS/emailnotification/emailnotification.puml
+!includeurl AWSPUML/Messaging/AmazonSNS/topic/topic.puml
+
+!includeurl AWSPUML/Messaging/AmazonSQS/AmazonSQS.puml
+!includeurl AWSPUML/Messaging/AmazonSQS/message/message.puml
+!includeurl AWSPUML/Messaging/AmazonSQS/queue/queue.puml
+
+package "Messaging" {
+    AMAZONPINPOINT("AMAZONPINPOINT")
+    MESSAGING_AMAZONPINPOINT("MESSAGING_AMAZONPINPOINT")
+
+    AMAZONSES("AMAZONSES") {
+        EMAIL("EMAIL")
+    }
+
+    AMAZONSNS("AMAZONSNS") {
+        HTTPNOTIFICATION("HTTPNOTIFICATION")
+        EMAILNOTIFICATION("EMAILNOTIFICATION")
+        TOPIC("TOPIC")
+        AMAZONSNS_TOPIC("AMAZONSNS_TOPIC")
+    }
+
+    AMAZONSQS("AMAZONSQS") {
+        MESSAGE("MESSAGE")
+        QUEUE("QUEUE")
+    }
+}
+
+@enduml

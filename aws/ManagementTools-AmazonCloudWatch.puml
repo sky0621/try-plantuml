@@ -4,16 +4,18 @@
 !includeurl AWSPUML/common.puml
 
 !includeurl AWSPUML/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
-!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/
+!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/alarm/alarm.puml
+!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/eventeventbased/eventeventbased.puml
+!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/eventtimebased/eventtimebased.puml
+!includeurl AWSPUML/ManagementTools/AmazonCloudWatch/rule/rule.puml
 
 package "ManagementTools" {
     AMAZONCLOUDWATCH("AMAZONCLOUDWATCH") {
-
+        ALARM("ALARM")
+        EVENTEVENTBASED("EVENTEVENTBASED")
+        EVENTTIMEBASED("EVENTTIMEBASED")
+        RULE("RULE")
+        AMAZONCLOUDWATCH_RULE("AMAZONCLOUDWATCH_RULE")
     }
 }
 

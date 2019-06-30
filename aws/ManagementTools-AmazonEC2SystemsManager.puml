@@ -1,0 +1,29 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/AmazonEC2SystemsManager.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/Automation/Automation.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/Inventory/Inventory.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/MaintenanceWindow/MaintenanceWindow.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/ParameterStore/ParameterStore.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/PatchManager/PatchManager.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/RunCommand/RunCommand.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/StateManager/StateManager.puml
+!includeurl AWSPUML/ManagementTools/AmazonEC2SystemsManager/documents/documents.puml
+
+package "ManagementTools" {
+    AMAZONEC2SYSTEMSMANAGER("AMAZONEC2SYSTEMSMANAGER") {
+        AUTOMATION("AUTOMATION")
+        INVENTORY("INVENTORY")
+        MAINTENANCEWINDOW("MAINTENANCEWINDOW")
+        PARAMETERSTORE("PARAMETERSTORE")
+        PATCHMANAGER("PATCHMANAGER")
+        RUNCOMMAND("RUNCOMMAND")
+        STATEMANAGER("STATEMANAGER")
+        DOCUMENTS("DOCUMENTS")
+    }
+}
+
+@enduml

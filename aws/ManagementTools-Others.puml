@@ -7,9 +7,6 @@
 !includeurl AWSPUML/ManagementTools/AWSConfig/AWSConfig.puml
 !includeurl AWSPUML/ManagementTools/AWSManagedServices/AWSManagedServices.puml
 !includeurl AWSPUML/ManagementTools/AWSServiceCatalog/AWSServiceCatalog.puml
-!includeurl AWSPUML/ManagementTools/
-!includeurl AWSPUML/ManagementTools/
-!includeurl AWSPUML/ManagementTools/
 
 package "ManagementTools" {
     AWSCLOUDTRAIL("AWSCLOUDTRAIL")
