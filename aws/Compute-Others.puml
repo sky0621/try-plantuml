@@ -24,7 +24,6 @@
 
 !includeurl AWSPUML/Compute/ElasticLoadBalancing/ElasticLoadBalancing.puml
 !includeurl AWSPUML/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml
-!includeurl AWSPUML/Compute/ElasticLoadBalancing/ApplicationLoadBalancing_LARGE/ApplicationLoadBalancing_LARGE.puml
 !includeurl AWSPUML/Compute/ElasticLoadBalancing/ClassicLoadbalancer/ClassicLoadbalancer.puml
 
 package "Compute" {
@@ -54,8 +53,6 @@ package "Compute" {
     ELASTICLOADBALANCING("ELASTICLOADBALANCING") {
         APPLICATIONLOADBALANCER("APPLICATIONLOADBALANCER")
         COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER("COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER")
-        APPLICATIONLOADBALANCING_LARGE("APPLICATIONLOADBALANCING_LARGE")
-        COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE("COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE")
         CLASSICLOADBALANCER("CLASSICLOADBALANCER")
     }
 }

@@ -1,0 +1,39 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Database/AmazonRDS/AmazonRDS.puml
+!includeurl AWSPUML/Database/AmazonRDS/DBinstance/DBinstance.puml
+!includeurl AWSPUML/Database/AmazonRDS/MSSQLinstance/MSSQLinstance.puml
+!includeurl AWSPUML/Database/AmazonRDS/MSSQLinstancealternate/MSSQLinstancealternate.puml
+!includeurl AWSPUML/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml
+!includeurl AWSPUML/Database/AmazonRDS/MySQLinstancealternate/MySQLinstancealternate.puml
+!includeurl AWSPUML/Database/AmazonRDS/OracleDBinstancealternate/OracleDBinstancealternate.puml
+!includeurl AWSPUML/Database/AmazonRDS/PIOP/PIOP.puml
+!includeurl AWSPUML/Database/AmazonRDS/PostgreSQLinstance/PostgreSQLinstance.puml
+!includeurl AWSPUML/Database/AmazonRDS/SQLmaster/SQLmaster.puml
+!includeurl AWSPUML/Database/AmazonRDS/SQLslave/SQLslave.puml
+!includeurl AWSPUML/Database/AmazonRDS/instancereadreplica/instancereadreplica.puml
+!includeurl AWSPUML/Database/AmazonRDS/instancestandby/instancestandby.puml
+!includeurl AWSPUML/Database/AmazonRDS/oracleDBinstance/oracleDBinstance.puml
+
+package "Database" {
+    AMAZONRDS("AMAZONRDS") {
+        DBINSTANCE("DBINSTANCE")
+        MSSQLINSTANCE("MSSQLINSTANCE")
+        MSSQLINSTANCEALTERNATE("MSSQLINSTANCEALTERNATE")
+        MYSQLDBINSTANCE("MYSQLDBINSTANCE")
+        MYSQLINSTANCEALTERNATE("MYSQLINSTANCEALTERNATE")
+        ORACLEDBINSTANCEALTERNATE("ORACLEDBINSTANCEALTERNATE")
+        PIOP("PIOP")
+        POSTGRESQLINSTANCE("POSTGRESQLINSTANCE")
+        SQLMASTER("SQLMASTER")
+        SQLSLAVE("SQLSLAVE")
+        INSTANCEREADREPLICA("INSTANCEREADREPLICA")
+        INSTANCESTANDBY("INSTANCESTANDBY")
+        ORACLEDBINSTANCE("ORACLEDBINSTANCE")
+    }
+}
+
+@enduml

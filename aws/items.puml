@@ -2,6 +2,14 @@
 !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 
 !include AI.puml
+!include AmazonConnect.puml
 !include Analytics.puml
+!include ApplicationServices.puml
+!include BusinessProductivity.puml
+!include Compute-EC2.puml
+!include Compute-Others.puml
+!include Compute-VPC.puml
+!include Database-Others.puml
+!include Database-RDS.puml
 
 @enduml
