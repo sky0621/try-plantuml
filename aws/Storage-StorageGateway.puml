@@ -1,0 +1,19 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Storage/AWSStorageGateway/AWSStorageGateway.puml
+!includeurl AWSPUML/Storage/AWSStorageGateway/cachedvolume/cachedvolume.puml
+!includeurl AWSPUML/Storage/AWSStorageGateway/non_cachedvolume/non_cachedvolume.puml
+!includeurl AWSPUML/Storage/AWSStorageGateway/virtualtapelibrary/virtualtapelibrary.puml
+
+package "Storage" {
+    AWSSTORAGEGATEWAY("AWSSTORAGEGATEWAY") {
+        CACHEDVOLUME("CACHEDVOLUME")
+        NON_CACHEDVOLUME("NON_CACHEDVOLUME")
+        VIRTUALTAPELIBRARY("VIRTUALTAPELIBRARY")
+    }
+}
+
+@enduml

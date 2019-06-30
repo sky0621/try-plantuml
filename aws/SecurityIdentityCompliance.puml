@@ -1,0 +1,67 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/ACM/certificatemanager/certificatemanager.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSArtifact/AWSArtifact.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSCertificateManager/AWSCertificateManager.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSCertificateManager/certificatemanager/certificatemanager.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSCloudHSM/AWSCloudHSM.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSDirectoryService/AWSDirectoryService.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSKMS/AWSKMS.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSOrganizations/AWSOrganizations.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSShield/AWSShield.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSWAF/AWSWAF.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSWAF/filteringrule/filteringrule.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AmazonCloudDirectory/AmazonCloudDirectory.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AmazonInspector/AmazonInspector.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AmazonInspector/agent/agent.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AmazonMacie/AmazonMacie.puml
+
+package "SecurityIdentityCompliance" {
+    CERTIFICATEMANAGER("CERTIFICATEMANAGER")
+    ACM_CERTIFICATEMANAGER("ACM_CERTIFICATEMANAGER")
+
+    AWSARTIFACT("AWSARTIFACT")
+
+    AWSCERTIFICATEMANAGER("AWSCERTIFICATEMANAGER") {
+        CERTIFICATEMANAGER("CERTIFICATEMANAGER")
+        AWSCERTIFICATEMANAGER_CERTIFICATEMANAGER("AWSCERTIFICATEMANAGER_CERTIFICATEMANAGER")
+    }
+
+    AWSCLOUDHSM("AWSCLOUDHSM")
+
+    AWSDIRECTORYSERVICE("AWSDIRECTORYSERVICE")
+
+    AWSKMS("AWSKMS")
+
+    AWSORGANIZATIONS("AWSORGANIZATIONS")
+
+    AWSSHIELD("AWSSHIELD")
+
+    AWSWAF("AWSWAF") {
+        FILTERINGRULE("FILTERINGRULE")
+    }
+
+    AMAZONCLOUDDIRECTORY("AMAZONCLOUDDIRECTORY")
+
+    AMAZONINSPECTOR("AMAZONINSPECTOR") {
+        AGENT("AGENT")
+    }
+
+    AMAZONMACIE("AMAZONMACIE")
+}
+
+@enduml

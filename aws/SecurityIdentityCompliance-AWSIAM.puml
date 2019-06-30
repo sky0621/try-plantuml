@@ -1,0 +1,23 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/AWSSTS/AWSSTS.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/AWSSTS_2/AWSSTS_2.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/addon/addon.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/dataencryptionkey/dataencryptionkey.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/AWSIAM/encrypteddata/encrypteddata.puml
+
+package "SecurityIdentityCompliance" {
+    AWSIAM("AWSIAM") {
+        AWSSTS("AWSSTS")
+        AWSSTS_2("AWSSTS_2")
+        ADDON("ADDON")
+        DATAENCRYPTIONKEY("DATAENCRYPTIONKEY")
+        ENCRYPTEDDATA("ENCRYPTEDDATA")
+    }
+}
+
+@enduml

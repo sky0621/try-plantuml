@@ -1,0 +1,23 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/SecurityIdentityCompliance/IAM/MFAtoken/MFAtoken.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/IAM/long_termsecuritycredential/long_termsecuritycredential.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/IAM/permissions/permissions.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/IAM/role/role.puml
+!includeurl AWSPUML/SecurityIdentityCompliance/IAM/temporarysecuritycredential/temporarysecuritycredential.puml
+
+package "SecurityIdentityCompliance" {
+    package "IAM" {
+        MFATOKEN("MFATOKEN")
+        LONG_TERMSECURITYCREDENTIAL("LONG_TERMSECURITYCREDENTIAL")
+        PERMISSIONS("PERMISSIONS")
+        IAM_PERMISSIONS("IAM_PERMISSIONS")
+        ROLE("ROLE")
+        TEMPORARYSECURITYCREDENTIAL("TEMPORARYSECURITYCREDENTIAL")
+    }
+}
+
+@enduml

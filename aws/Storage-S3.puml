@@ -1,0 +1,19 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+!includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
+!includeurl AWSPUML/Storage/AmazonS3/bucketwithobjects/bucketwithobjects.puml
+!includeurl AWSPUML/Storage/AmazonS3/object/object.puml
+
+package "Storage" {
+    AMAZONS3("AMAZONS3") {
+        BUCKET("BUCKET")
+        BUCKETWITHOBJECTS("BUCKETWITHOBJECTS")
+        OBJECT("OBJECT")
+    }
+}
+
+@enduml

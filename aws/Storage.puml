@@ -1,0 +1,47 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Storage/AWSSnowball/AWSSnowball.puml
+!includeurl AWSPUML/Storage/AWSSnowball/importexport/importexport.puml
+
+!includeurl AWSPUML/Storage/AmazonEBS/AmazonEBS.puml
+
+!includeurl AWSPUML/Storage/AmazonEFS/AmazonEFS.puml
+!includeurl AWSPUML/Storage/AmazonEFS/EFSfilesystem/EFSfilesystem.puml
+
+!includeurl AWSPUML/Storage/AmazonGlacier/AmazonGlacier.puml
+!includeurl AWSPUML/Storage/AmazonGlacier/archive/archive.puml
+!includeurl AWSPUML/Storage/AmazonGlacier/vault/vault.puml
+
+!includeurl AWSPUML/Storage/snapshot/snapshot.puml
+!includeurl AWSPUML/Storage/volume/volume.puml
+
+package "Storage" {
+    AWSSNOWBALL("AWSSNOWBALL") {
+        IMPORTEXPORT("IMPORTEXPORT")
+        STORAGE_AWSSNOWBALL_IMPORTEXPORT("STORAGE_AWSSNOWBALL_IMPORTEXPORT")
+    }
+    STORAGE_AWSSNOWBALL("STORAGE_AWSSNOWBALL") {
+        IMPORTEXPORT("IMPORTEXPORT")
+        STORAGE_AWSSNOWBALL_IMPORTEXPORT("STORAGE_AWSSNOWBALL_IMPORTEXPORT")
+    }
+
+    AMAZONEBS("AMAZONEBS")
+
+    AMAZONEFS("AMAZONEFS") {
+        EFSFILESYSTEM("EFSFILESYSTEM")
+    }
+
+    AMAZONGLACIER("AMAZONGLACIER") {
+        ARCHIVE("ARCHIVE")
+        VAULT("VAULT")
+    }
+
+    SNAPSHOT("SNAPSHOT")
+
+    VOLUME("VOLUME")
+}
+
+@enduml
