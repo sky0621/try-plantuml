@@ -1,0 +1,42 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/NetworkingContentDelivery/AWSDirectConnect/AWSDirectConnect.puml
+
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonCloudFront/AmazonCloudFront.puml
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonCloudFront/downloaddistribution/downloaddistribution.puml
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonCloudFront/edgelocation/edgelocation.puml
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonCloudFront/streamingdistribution/streamingdistribution.puml
+
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonRoute53/hostedzone/hostedzone.puml
+!includeurl AWSPUML/NetworkingContentDelivery/AmazonRoute53/routetable/routetable.puml
+
+!includeurl AWSPUML/NetworkingContentDelivery/ElasticLoadBalancing/ElasticLoadBalancing.puml
+!includeurl AWSPUML/NetworkingContentDelivery/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml
+!includeurl AWSPUML/NetworkingContentDelivery/ElasticLoadBalancing/ClassicLoadBalancer/ClassicLoadBalancer.puml
+
+package "NetworkingContentDelivery" {
+    AWSDIRECTCONNECT("AWSDIRECTCONNECT")
+
+    AMAZONCLOUDFRONT("AMAZONCLOUDFRONT") {
+        DOWNLOADDISTRIBUTION("DOWNLOADDISTRIBUTION")
+        EDGELOCATION("EDGELOCATION")
+        STREAMINGDISTRIBUTION("STREAMINGDISTRIBUTION")
+    }
+
+    AMAZONROUTE53("AMAZONROUTE53") {
+        HOSTEDZONE("HOSTEDZONE")
+        ROUTETABLE("ROUTETABLE")
+    }
+
+    ELASTICLOADBALANCING("ELASTICLOADBALANCING") {
+        APPLICATIONLOADBALANCER("APPLICATIONLOADBALANCER")
+        NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER("NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER")
+        CLASSICLOADBALANCER("CLASSICLOADBALANCER")
+    }
+}
+
+@enduml

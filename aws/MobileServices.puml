@@ -1,0 +1,33 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/MobileServices/AWSDeviceFarm/AWSDeviceFarm.puml
+
+!includeurl AWSPUML/MobileServices/AWSMobileHub/AWSMobileHub.puml
+
+!includeurl AWSPUML/MobileServices/AmazonAPIGateway/AmazonAPIGateway.puml
+
+!includeurl AWSPUML/MobileServices/AmazonCognito/AmazonCognito.puml
+
+!includeurl AWSPUML/MobileServices/AmazonMobileAnalytics/AmazonMobileAnalytics.puml
+
+!includeurl AWSPUML/MobileServices/AmazonPinpoint/AmazonPinpoint.puml
+
+package "MobileServices" {
+    AWSDEVICEFARM("AWSDEVICEFARM")
+
+    AWSMOBILEHUB("AWSMOBILEHUB")
+
+    AMAZONAPIGATEWAY("AMAZONAPIGATEWAY")
+
+    AMAZONCOGNITO("AMAZONCOGNITO")
+
+    AMAZONMOBILEANALYTICS("AMAZONMOBILEANALYTICS")
+
+    AMAZONPINPOINT("AMAZONPINPOINT")
+    MOBILESERVICES_AMAZONPINPOINT("MOBILESERVICES_AMAZONPINPOINT")
+}
+
+@enduml

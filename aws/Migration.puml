@@ -1,0 +1,42 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
+
+!includeurl AWSPUML/common.puml
+
+!includeurl AWSPUML/Migration/AWSApplicationDiscoveryService/AWSApplicationDiscoveryService.puml
+
+!includeurl AWSPUML/Migration/AWSDMS/AWSDMS.puml
+!includeurl AWSPUML/Migration/AWSDMS/databasemigrationworkflow_job/databasemigrationworkflow_job.puml
+
+!includeurl AWSPUML/Migration/AWSMigrationHub/AWSMigrationHub.puml
+
+!includeurl AWSPUML/Migration/AWSSMS/AWSSMS.puml
+
+!includeurl AWSPUML/Migration/AWSSnowball/AWSSnowball.puml
+!includeurl AWSPUML/Migration/AWSSnowball/importexport/importexport.puml
+
+package "Migration" {
+    AWSAPPLICATIONDISCOVERYSERVICE("AWSAPPLICATIONDISCOVERYSERVICE")
+
+    AWSDMS("AWSDMS") {
+        DATABASEMIGRATIONWORKFLOW_JOB("DATABASEMIGRATIONWORKFLOW_JOB")
+    }
+    MIGRATION_AWSDMS("MIGRATION_AWSDMS") {
+        DATABASEMIGRATIONWORKFLOW_JOB("DATABASEMIGRATIONWORKFLOW_JOB")
+    }
+
+    AWSMIGRATIONHUB("AWSMIGRATIONHUB")
+
+    AWSSMS("AWSSMS")
+
+    AWSSNOWBALL("AWSSNOWBALL") {
+        IMPORTEXPORT("IMPORTEXPORT")
+        MIGRATION_AWSSNOWBALL_IMPORTEXPORT("MIGRATION_AWSSNOWBALL_IMPORTEXPORT")
+    }
+    MIGRATION_AWSSNOWBALL("MIGRATION_AWSSNOWBALL") {
+        IMPORTEXPORT("IMPORTEXPORT")
+        MIGRATION_AWSSNOWBALL_IMPORTEXPORT("MIGRATION_AWSSNOWBALL_IMPORTEXPORT")
+    }
+}
+
+@enduml
