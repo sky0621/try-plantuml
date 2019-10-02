@@ -1,0 +1,107 @@
+@startuml ca
+
+class App << (S,orchid) >> {
+    {field} e *echo.Echo
+    {field} itemUsecase usecase.Item
+    {field} itemController controller.Item
+    {method} Start()
+}
+
+namespace adapter  {
+    namespace controller {
+        interface Item {
+            {method} Handle()
+        }
+
+        class itemController << (S,orchid) >> {
+            {method} Handle()
+            {method} saveItem(c echo.Context)
+            {method} listItem(c echo.Context)
+        }
+
+        Item <|.. itemController
+    }
+
+    namespace gateway {
+        class ItemRepository << (S,orchid) >> {
+            {method} SaveItem(m *model.Item)
+            {method} ListItem() []*model.Item
+        }
+
+        class itemRecord << (S,orchid) >>
+    }
+
+    namespace presenter {
+        class itemPresenter << (S,orchid) >> {
+            {method} RenderSaveResult(target *usecasemodel.SaveItem)
+            {method} RenderListResult(targets []*usecasemodel.ListItem)
+            {method} RenderFailure(err error)
+        }
+
+        usecase.outputport.ItemOutputPort <|.. itemPresenter
+
+        class saveItemResponse << (S,orchid) >>
+        class listItemResponse << (S,orchid) >>
+    }
+}
+
+namespace domain {
+    namespace repository {
+
+    }
+
+    namespace model {
+
+    }
+}
+
+namespace driver {
+    class db << (F,gray) >> {
+        {method} NewDBConnection()
+    }
+}
+
+namespace usecase._ {
+    interface Item {
+        {method} SaveItem(r *SaveItemRequest, o outputport.ItemOutputPort)
+        {method} ListItem(o outputport.ItemOutputPort)
+    }
+
+    class item << (S,orchid) >> {
+        {field} itemDomain domain.Item
+        {method} SaveItem(r *SaveItemRequest, o outputport.ItemOutputPort)
+        {method} ListItem(o outputport.ItemOutputPort)
+    }
+
+    Item <|.. item
+
+}
+
+namespace usecase.model {
+
+}
+
+namespace usecase.outputport {
+    interface ItemOutputPort {
+        {method} RenderSaveResult(target *usecasemodel.SaveItem)
+        {method} RenderListResult(targets []*usecasemodel.ListItem)
+        {method} RenderFailure(err error)
+    }
+}
+
+
+
+package "UUU" {
+    package "ABC" {
+        class XYZ
+    }
+}
+package "YYY" {
+    package "DEF" {
+        class JJJ
+        ABC.XYZ <|.. JJJ
+    }
+
+}
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+autonumber
+
+actor Alice
+boundary "POST /item"
+control "controller/item" <<(S,#FFCC00) >>
+entity "usecase.Item" << (I,Pink) >>
+database item
+
+Alice -> "POST /item": Request
+"POST /item" -> "controller/item": saveItem()
+
+@enduml
